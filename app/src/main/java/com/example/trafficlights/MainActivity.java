@@ -31,31 +31,32 @@ public class MainActivity extends AppCompatActivity {
         b_1.setBackgroundColor(getResources().getColor(R.color.green));
         if (!start_stop) {
             start_stop = true;
-            button.setText("Стоп");
+            button.setText("STOP");
              new Thread(new Runnable() {
             @Override
             public void run() {
                     while (start_stop) {
                         counter++;
+                        if(counter == 47)
+                            counter = 0;
                         runOnUiThread(new Runnable() { //Запустить на основном потоке
                             @Override
                             public void run() {
                                 switch (counter){
-                                    case 1:
+                                    case 1: // Set your sec
                                         b_1.setBackgroundColor(getResources().getColor(R.color.green));
                                         b_2.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_3.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         break;
-                                    case 30:
+                                    case 15:
                                         b_1.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_2.setBackgroundColor(getResources().getColor(R.color.yellow));
                                         b_3.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         break;
-                                    case 33:
+                                    case 17:
                                         b_1.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_2.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_3.setBackgroundColor(getResources().getColor(R.color.red));
-                                        counter = -15;
                                         break;
 
                                 }
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             b_2.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
             b_3.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
             counter = 0;
-            button.setText("Старт");
+            button.setText("START");
 
         }
     }
