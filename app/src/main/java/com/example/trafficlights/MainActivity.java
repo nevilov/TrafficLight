@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 switch (counter){
-                                    case 15:
+                                    case 1:
                                         b_1.setBackgroundColor(getResources().getColor(R.color.green));
                                         b_2.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_3.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
