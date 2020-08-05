@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                     while (start_stop) {
                         counter++;
-                        if(counter == 47)
-                            counter = 0;
                         runOnUiThread(new Runnable() { //Запустить на основном потоке
                             @Override
                             public void run() {
@@ -48,15 +46,23 @@ public class MainActivity extends AppCompatActivity {
                                         b_2.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_3.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         break;
-                                    case 15:
+                                    case 30:
                                         b_1.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_2.setBackgroundColor(getResources().getColor(R.color.yellow));
                                         b_3.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         break;
-                                    case 17:
+                                    case 33:
                                         b_1.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_2.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
                                         b_3.setBackgroundColor(getResources().getColor(R.color.red));
+                                        break;
+                                    case 63: // Set your sec
+                                        b_1.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
+                                        b_3.setBackgroundColor(getResources().getColor(R.color.ColorDefault));
+                                        b_2.setBackgroundColor(getResources().getColor(R.color.yellow));
+                                        break;
+                                    case 66:
+                                        counter=0;
                                         break;
 
                                 }
